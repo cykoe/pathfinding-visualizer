@@ -5,10 +5,10 @@ import bfs from '../algorithms/bfs';
 
 import './PathfindingVisualizer.scss';
 
-const START_NODE_ROW = 10;
-const START_NODE_COL = 15;
-const FINISH_NODE_ROW = 15;
-const FINISH_NODE_COL = 22;
+const START_NODE_ROW = 8;
+const START_NODE_COL = 3;
+const FINISH_NODE_ROW = 18;
+const FINISH_NODE_COL =9;
 
 export default class PathfindingVisualizer extends Component<any, any> {
   constructor(props: any) {
@@ -44,7 +44,7 @@ export default class PathfindingVisualizer extends Component<any, any> {
       if (i === visitedNodesInOrder.length) {
         setTimeout(() => {
           this.animateShortestPath(nodesInShortestPathOrder);
-        }, 5 * i);
+        }, 10 * i);
         return;
       }
       setTimeout(() => {
@@ -52,7 +52,7 @@ export default class PathfindingVisualizer extends Component<any, any> {
         // @ts-ignore
         document.getElementById(`node-${node.row}-${node.col}`).className =
           'node node-visited';
-      }, 5 * i);
+      }, 10 * i);
     }
   }
 
